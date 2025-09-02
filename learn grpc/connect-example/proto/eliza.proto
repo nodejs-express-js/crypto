@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package connectrpc.eliza.v1;
+
+message SayRequest {
+  string sentence = 1;
+}
+
+message SayResponse {
+  string sentence = 1;
+}
+
+message StreamRequest {
+  string sentence = 1;
+}
+
+message StreamResponse {
+  string sentence = 1;
+}
+
+
+message StreamArrayRequest {
+  repeated string sentences = 1;
+}
+
+message StreamArrayResponse {
+  repeated string sentences = 1;
+}
+
+
+
+message StreamPricesRequest {
+  string sentence = 1;
+}
+
+message StreamPriceResponse {
+  string sentence = 1;
+}
+
+service ElizaService {
+  rpc Say(SayRequest) returns (SayResponse);
+  rpc StreamResponses(StreamRequest) returns (stream StreamResponse);
+  rpc streamArrays(StreamArrayRequest) returns (stream StreamArrayResponse);
+  rpc StreamPrices(StreamPricesRequest) returns (stream StreamPriceResponse);
+}
