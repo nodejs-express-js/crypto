@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package connectrpc.crypto.v1;
+
+message CryptoRequest {
+  repeated string currencies = 1;
+}
+
+message CryptoResponse {
+  repeated string prices = 1;
+}
+
+service CryptoService {
+  rpc say(CryptoRequest) returns ( stream CryptoResponse) {};
+}   

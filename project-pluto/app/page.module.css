@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .inputContainer {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.2s;
+    background-color: lightgray;
+    color: grey;
+  }
+  
+  .input:focus {
+    border-color: #000;
+  }
+  
+  .addButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .addButton:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
+  
+  .addButton:hover:not(:disabled) {
+    background-color: #333;
+  }
+  
+  .loading {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -0.5rem;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+  }
+  
+  .ticker {
+    flex: 1;
+    font-weight: bold;
+  }
+  
+  .price {
+    width: 80px;
+    text-align: right;
+  }
+  
+  .removeButton {
+    color: black;
+    border: none;
+        width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .removeButton:hover {
+    background-color: #d9363e;
+  }
+  
+  .removeButton:disabled {
+    background-color: #faa;
+    cursor: not-allowed;
+  }
+  
